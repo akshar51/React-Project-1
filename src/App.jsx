@@ -27,15 +27,22 @@ const App = () => {
     setcount(newCount);
   }
 
+  const handleReset = ()=>{
+    let resetCount = 0;
+    localStorage.setItem("count",JSON.stringify(resetCount))
+    setcount(resetCount);
+  }
+
   return (
     <>
-      <div>
+      <div className='d-flex flex-column align-items-center'>
         <h2 className='mt-3 text-white text-center'>Counter App</h2>
           <div className='box'>
             <h2>{count}</h2>
           </div>
           <div className='box-btn'>
             <button onClick={handleDecrement}>-</button>
+            <button className='btn-reset' onClick={handleReset}>Reset</button>
             <button onClick={handleIncrement}>+</button>
           </div>
       </div>

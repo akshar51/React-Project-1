@@ -41,3 +41,10 @@ body{
   justify-content: center;
   align-items: center;
 }
+
+.box-btn :nth-child(2){
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
